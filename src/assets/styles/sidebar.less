@@ -1,0 +1,43 @@
+
+#app {
+  .main-container {
+    margin-left: 200px;
+    min-height: 100%;
+  }
+    
+  .sidebar-container {
+    width: 200px;
+    background: @base-menu-backgroud;
+    height: 100%;
+    position: fixed;
+    .el-menu {
+      border: none;
+    }
+    .svg-icon {
+      margin-right: 15px;
+    }
+  }
+  .hideSidebar {
+    .main-container {
+      margin-left: 54px;
+    }
+    .sidebar-container {
+      width: 54px;
+    }
+    .el-menu--collapse {
+      .el-submenu {
+        .el-submenu__title {
+          span {
+            visibility: hidden;
+            height: 0;
+            width: 0;
+            display: inline-block;
+          }
+          .el-submenu__icon-arrow {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+}

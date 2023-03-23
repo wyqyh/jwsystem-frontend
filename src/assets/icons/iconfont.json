@@ -1,0 +1,72 @@
+{
+  "id": "3958052",
+  "name": "教学管理系统",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12503928",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "31310788",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "1105000",
+      "name": "日历",
+      "font_class": "calendar",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "2039579",
+      "name": "部门",
+      "font_class": "bumen",
+      "unicode": "e687",
+      "unicode_decimal": 59015
+    },
+    {
+      "icon_id": "2127187",
+      "name": "账号管理",
+      "font_class": "zhanghaoguanli",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "3167230",
+      "name": "座机",
+      "font_class": "zuoji",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "6570225",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "9233004",
+      "name": "性别",
+      "font_class": "xingbie",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "33702444",
+      "name": "用户姓名",
+      "font_class": "a-lujing10858",
+      "unicode": "e6ed",
+      "unicode_decimal": 59117
+    }
+  ]
+}

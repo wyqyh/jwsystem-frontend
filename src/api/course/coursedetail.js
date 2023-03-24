@@ -7,3 +7,11 @@ export function addCourseDetail(params) {
     data: params
   })
 }
+
+export function pageCourseDetail(params) {
+  return request({
+    url: '/coursedetail/list',
+    method: 'post',
+    data: params
+  })
+}

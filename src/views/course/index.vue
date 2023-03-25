@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="8" :lg="6" :xl="9" style="margin-bottom: 10px">
+      <el-col :xs="24" :sm="24" :md="8" :lg="12" :xl="9" style="margin-bottom: 10px">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span>期班信息</span>

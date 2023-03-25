@@ -6,15 +6,17 @@
       status-icon
       ref="loginFormRef"
       :rules="loginFormRule">
-      <h3>文件管理系统</h3>
+      <h3>教学管理系统</h3>
       <el-form-item prop="username">
         <el-input type="text" v-model="loginForm.username" auto-complete="off" placeholder="登录名">
           <svg-icon slot="prefix" icon-class="user" class="el-input__icon input-icon"/>
         </el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" v-model="loginForm.password" auto-complete="off" placeholder="密码">
+        <el-input :type="passwordType" v-model="loginForm.password" auto-complete="off" placeholder="密码">
           <svg-icon slot="prefix" icon-class="password" class="el-input__icon input-icon"/>
+          <svg-icon slot="suffix" class="show-pwd" 
+            @click="showPwd" :icon-class="passwordType === 'password' ? 'no_eye' : 'eye'"/>
         </el-input>
       </el-form-item>
       <el-form-item prop="code">
@@ -52,12 +54,20 @@ export default {
         password: [
           { required: true, message: "密码不能为空", trigger: "blur" },
         ]
-      }
+      },
+      passwordType: 'password'
     }
   },
   methods: {
     getCode() {
       this.codeUrl = 'http://localhost:8083/kaptcha/create?timestamp=' + new Date().getTime()
+    },
+    showPwd() {
+      if(this.passwordType === 'password') {
+        this.passwordType = ''
+      } else {
+        this.passwordType = 'password'
+      }
     },
     handleLogin() {
       this.$refs.loginFormRef.validate(valid => {
@@ -105,14 +115,25 @@ export default {
 }
 
 .login-code {
-    width: 33%;
-    display: inline-block;
-    height: 38px;
-    float: right;
+  width: 33%;
+  display: inline-block;
+  height: 38px;
+  float: right;
 
-    img {
-      cursor: pointer;
-      vertical-align: middle
-    }
+  img {
+    cursor: pointer;
+    vertical-align: middle
   }
+}
+.show-pwd {
+  text-align: center;
+  padding-right: 10px;
+  padding-top: 15px;
+  display: inline-flex;
+}
+.el-form-item--feedback {
+  .el-input__validateIcon {
+    display: none;
+  }
+}
 </style>

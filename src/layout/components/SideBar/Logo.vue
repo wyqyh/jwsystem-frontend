@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       logImg: logImg,
-      title: "权限管理系统"
+      title: "教学管理系统"
     }
   }
 }

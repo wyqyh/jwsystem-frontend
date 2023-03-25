@@ -24,7 +24,7 @@
             @closeAddType="handleClose" @sendTypeids="getTypeids"/>
         </el-card>
       </el-col>
-      <el-col :xs="24" :sm="24" :md="8" :lg="6" :xl="10" style="margin-bottom: 10px">
+      <el-col :xs="24" :sm="24" :md="8" :lg="15" :xl="10" style="margin-bottom: 10px">
         <el-card class="box-card">
           <div slot="header" class="clearfix">
             <span>类别信息</span>

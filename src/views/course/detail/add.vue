@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
   <el-row :gutter="40">
-    <el-col :xs="24" :sm="24" :md="8" :lg="6" :xl="10" style="margin-bottom: 10px">
+    <el-col :xs="24" :sm="24" :md="8" :lg="12" :xl="10" style="margin-bottom: 10px">
       <el-form label-width="100px" :model="detailinfo" ref="detailInfoRef" :rules="rules">
         <h4 class="form-header">期班信息</h4>
         <el-row>
@@ -109,6 +109,7 @@
           <el-col :span="12">
             <el-form-item label="授课日期" prop="teachdate">
               <el-date-picker
+                style="width: 100%"
                 v-model="detailinfo.teachdate"
                 type="date"
                 value-format="yyyy-MM-dd"
@@ -159,7 +160,7 @@
         </el-row>
       </el-form>
     </el-col>
-    <el-col :xs="24" :sm="24" :md="8" :lg="6" :xl="14" style="margin-bottom: 10px">
+    <el-col :xs="24" :sm="24" :md="8" :lg="12" :xl="14" style="margin-bottom: 10px">
       <el-table :data="courseDetails">
         <el-table-column label="序号" type="index"></el-table-column>
         <el-table-column label="期班号" prop="classno"></el-table-column>

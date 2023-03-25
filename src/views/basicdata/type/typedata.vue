@@ -47,7 +47,7 @@
       </el-form>
       <div slot="footer">
         <el-button type="primary" @click="submitForm">确定</el-button>
-        <el-button @click="cancel">取消</el-button>
+        <el-button @click="handleCloseDialog">取消</el-button>
       </div>
     </el-dialog>
   </div>
@@ -125,12 +125,14 @@ export default {
       } 
     },
     handleCloseDialog() {
-      this.resetForm('addTypeDataFormRef')
+      this.typedata = { 
+        dataid: undefined,
+        typeid: undefined,
+        typeno: undefined,
+        name: undefined
+      }
       this.showDialog = false
       this.$emit('closeAddDataDialog')
-    },
-    cancel() {
-      this.handleCloseDialog()
     },
     submitForm() {
       this.$refs.addTypeDataFormRef.validate(valid => {

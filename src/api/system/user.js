@@ -16,6 +16,14 @@ export function addUser(params) {
   })
 }
 
+export function registe(params) {
+  return request({
+    url: '/user/registe',
+    method: 'post',
+    data: params
+  })
+}
+
 export function updateUser(params) {
   return request({
     url: '/user/update',

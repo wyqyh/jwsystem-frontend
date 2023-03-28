@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Login from '../views/Login.vue'
+import Registe from '../views/registe.vue'
 import Layout from '../layout/index'
 import Index from "../views/index"
 import GrantRoles from "../views/system/user/grantrole.vue"
@@ -23,6 +24,12 @@ export const constantRouters = [
     path: '/login',
     name: 'Login',
     component: Login,
+    hidden: true
+  },
+  {
+    path: '/registe',
+    name: 'Registe',
+    component: Registe,
     hidden: true
   },
   {
@@ -91,7 +98,7 @@ const router = new VueRouter({
   routes: constantRouters
 })
 
-const whiteList = ['/login']
+const whiteList = ['/login', '/registe']
 
 router.beforeEach((to, from, next) => {
   let uid = getUid()

@@ -30,6 +30,7 @@
       <el-form-item>
         <el-button type="primary" style="width: 100%" @click="handleLogin"
           >登录</el-button>
+        <el-button type="text" style="width: 100%" @click="handleRegiste">新用户注册</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -68,6 +69,9 @@ export default {
       } else {
         this.passwordType = 'password'
       }
+    },
+    handleRegiste() {
+      this.$router.push({path: "/registe"})
     },
     handleLogin() {
       this.$refs.loginFormRef.validate(valid => {
@@ -119,7 +123,6 @@ export default {
   display: inline-block;
   height: 38px;
   float: right;
-
   img {
     cursor: pointer;
     vertical-align: middle

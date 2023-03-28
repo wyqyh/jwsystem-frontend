@@ -173,6 +173,7 @@ export default {
       this.title = "修改类别信息"
       this.showDialog = true
       this.typedata.dataid = row.id
+      this.typedata.typeno = row.typeno
       this.typedata.name = row.name
       this.typedata.typeid = row.typeid
     },

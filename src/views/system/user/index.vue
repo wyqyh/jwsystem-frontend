@@ -195,6 +195,7 @@ import { listRole } from "../../../api/system/role"
 import { getUsers, updateUser, addUser, delUser} from "../../../api/system/user"
 import TreeSelect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
+import { getTree } from '../../../utils/commons'
 
 export default {
   name: "User",
@@ -259,7 +260,7 @@ export default {
   created() {
     getDept().then(res => {
       this.deptTree = res
-      this.deptSelectList = this.getTree(res)
+      this.deptSelectList = getTree(res)
     })
     //角色数据不超过10000，代替查询全部角色
     listRole({'pageSize': 10000}).then(res => {
@@ -294,21 +295,6 @@ export default {
     resetQuery() {
       this.resetForm('queryForm')
       this.loadUsers();
-    },
-    getTree(tree = []) {
-      let arr = [];
-      if(tree.length !== 0) {
-        tree.forEach(item => {
-          let obj = {}
-          obj.label = item.name
-          obj.id = item.id
-          if(item.children) {
-            obj.children = this.getTree(item.children)
-          }
-          arr.push(obj)
-        })
-      }
-      return arr
     },
     handleAdd() {
       this.title = '新增用户'
